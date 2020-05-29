@@ -42,7 +42,15 @@ if len(argument) < 2:
 
 protocol = argument[1].lower()
 
-if protocol == 'site':
+if protocol == 'help':
+    print(f'''
+{'=' * 32}
+* python3 main.py ip <ip>
+* python3 main.py site <url>
+{'=' * 32}
+    ''')
+
+elif protocol == 'site':
     get_site_ip(argument[2])
 
 elif protocol == 'ip':
